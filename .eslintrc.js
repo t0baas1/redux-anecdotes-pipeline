@@ -9,6 +9,11 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended'
   ],
+  'settings': {
+    'react': {
+      'version': 'detect'
+    }
+  },
   'parserOptions': {
     'ecmaFeatures': {
       'jsx': true
@@ -43,5 +48,5 @@ module.exports = {
     ],
     'no-console': 'error',
     'react/prop-types': 0
-  }
+  },
 }

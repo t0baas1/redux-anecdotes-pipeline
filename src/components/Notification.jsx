@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 const Notification = (props) => {
 
   if(props.notification === null){
-    return
+    return null
   }
 
   const style = {
