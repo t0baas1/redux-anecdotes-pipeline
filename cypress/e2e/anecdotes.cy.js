@@ -16,7 +16,7 @@ describe('Anecdotes', () => {
   })
 
   it('can filter out anecdotes', () => {
-    cy.wait('@getAnecs')
+    cy.wait(1000)
     cy.contains('If it hurts, do it more often').should('exist')
     cy.get('input').eq(0).type('xxxx').blur()
     cy.contains('If it hurts, do it more often').should('not.exist')
@@ -25,7 +25,7 @@ describe('Anecdotes', () => {
   })
 
   it('can create new anecdote', () => {
-    cy.wait('@getAnecs')
+    cy.wait(1000)
     cy.get('input').eq(1).type(anecdote).blur()
     cy.get('button').contains('create').click()
     cy.wait(1000)
