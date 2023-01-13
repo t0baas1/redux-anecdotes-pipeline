@@ -18,9 +18,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack-dev-server --open --mode development",
     "start-prod": "node app.js",
-    "build": "react-scripts build",
+    "build": "webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server.js",
@@ -50,7 +50,8 @@
     "cypress": "^12.3.0",
     "eslint": "^8.31.0",
     "eslint-plugin-react": "^7.32.0",
+    "express": "^4.17.1",
     "json-server": "^0.17.1",
-    "express": "^4.17.1"
+    "webpack-cli": "^5.0.1"
   }
 }
