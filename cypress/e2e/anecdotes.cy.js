@@ -6,7 +6,7 @@ describe('Anecdotes', () => {
   const anecdote = `Cypress test anecdote ${second}`
 
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:5000')
     cy.intercept('GET', '**/anecdotes').as('getAnecs')
   })
 
