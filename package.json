@@ -19,8 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "install-server": "install -g serve",
-    "start-server": "serve -s build",
+    "start-prod": "node app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -46,10 +45,12 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://github.com/t0baas1/redux-anecdotes-pipeline",
   "devDependencies": {
     "cypress": "^12.3.0",
     "eslint": "^8.31.0",
     "eslint-plugin-react": "^7.32.0",
-    "json-server": "^0.17.1"
+    "json-server": "^0.17.1",
+    "express": "^4.17.1"
   }
 }
