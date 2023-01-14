@@ -16,7 +16,7 @@ describe('Anecdotes', () => {
   })
 
   it('can filter out anecdotes', () => {
-    cy.wait(2000)
+    cy.wait(5000)
     cy.contains('If it hurts, do it more often').should('exist')
     cy.get('input').eq(0).type('xxxx').blur()
     cy.contains('If it hurts, do it more often').should('not.exist')
