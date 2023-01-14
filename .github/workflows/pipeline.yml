@@ -28,7 +28,7 @@ jobs:
           build: npm run build
           start: npm run start-prod
           wait-on: http://localhost:5000
-            - name: Build Failure
+      - name: Build Failure
         uses: rjstone/discord-webhook-notify@v1
         if: failure()
         with:
