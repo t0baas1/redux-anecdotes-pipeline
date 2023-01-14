@@ -15,7 +15,7 @@ const NewAnec = (props) => {
 
   return (
     <div>
-      <h2>create new</h2>
+      <h1>create new</h1>
       <form onSubmit={addAnec}>
         <div><input name="anec" /></div>
         <button type="submit">create</button>
