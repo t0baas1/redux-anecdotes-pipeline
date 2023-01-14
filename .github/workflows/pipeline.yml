@@ -28,6 +28,19 @@ jobs:
           build: npm run build
           start: npm run start-prod
           wait-on: http://localhost:5000
+            - name: Build Failure
+        uses: rjstone/discord-webhook-notify@v1
+        if: failure()
+        with:
+            severity: error
+            username: GitHub
+            color: '#e12a2a'
+            avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
+            description: Build failed :(
+            details: Build failed, product is borkke :(
+            footer: Not awesome
+            text: Build failed!
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag_release:
     needs: [deployment_pipeline]
     runs-on: ubuntu-20.04
@@ -56,3 +69,16 @@ jobs:
           checkstring: "ok"
           delay: 5
           rollbackonhealthcheckfailed: true
+      - name: Deploy success
+        uses: rjstone/discord-webhook-notify@v1
+        if: success()
+        with:
+            severity: info
+            username: GitHub
+            color: '#00ff00'
+            avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
+            description: Latest deploy is up and running
+            details: Deploy Succeeded
+            footer: Awesome!
+            text: App is deployed!
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
